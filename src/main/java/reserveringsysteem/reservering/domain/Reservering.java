@@ -10,16 +10,27 @@ public class Reservering {
     private GebruikerId gebruiker;
     private  ReserveringsMoment moment;
 
-    public Reservering(ReserveringId id, ReserveringStatusEnum status, FlexplexId flexplek, GebruikerId gebruiker, ReserveringsMoment moment) {
+    public Reservering(ReserveringId id,  FlexplexId flexplek, GebruikerId gebruiker, ReserveringsMoment moment) {
         this.id = id;
-        this.status = status;
+        this.status = ReserveringStatusEnum.GELDIG;
         this.flexplek = flexplek;
         this.gebruiker = gebruiker;
         this.moment = moment;
     }
 
-    public ReserveringId getId() {
-        return id;
+    public boolean isBezet(ReserveringsMoment m, FlexplexId f){
+        if (moment.getDatum().equals(m.getDatum())) {
+            if (moment.getDagdeel().equals(m.getDagdeel())) {
+                if(flexplek.getId() == f.getId()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public int getId() {
+        return id.getId();
     }
 
     public void setId(ReserveringId id) {
