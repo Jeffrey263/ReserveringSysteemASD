@@ -1,4 +1,4 @@
 package reserveringsysteem.gebouw.application;
 
-public class FlexplekRESTService {
+public class FlexplekApplicationService {
 }
