@@ -1,4 +1,4 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
 public class VestigingAdres {
     private String straatnaam;

@@ -1,6 +1,6 @@
-package domain;
+package reserveringsysteem;
 
-import domain.gebouw.*;
+import reserveringsysteem.gebouw.domain.*;
 
 //TEMP main class to test
 public class main {

@@ -1,9 +1,9 @@
-package domain.gebruiker;
+package reserveringsysteem.gebouw.domain;
 
-public class GebruikerId {
+public class FlexplexId {
     private int id;
 
-    public GebruikerId(int id) {
+    public FlexplexId(int id) {
         this.id = id;
     }
 

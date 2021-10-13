@@ -1,4 +1,4 @@
-package domain;
+package reserveringsysteem;
 
 import java.util.List;
 

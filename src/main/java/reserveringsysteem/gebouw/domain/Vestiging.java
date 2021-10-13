@@ -1,4 +1,4 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
 import java.util.ArrayList;
 import java.util.List;

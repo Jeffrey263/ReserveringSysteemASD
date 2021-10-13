@@ -1,4 +1,4 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
 public class Flexplek {
     private FlexplexId id;

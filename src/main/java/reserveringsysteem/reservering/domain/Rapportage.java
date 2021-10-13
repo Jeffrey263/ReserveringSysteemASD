@@ -1,6 +1,6 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
-import domain.gebruiker.GebruikerId;
+import reserveringsysteem.gebruiker.GebruikerId;
 
 public class Rapportage {
     private RapportageId id;

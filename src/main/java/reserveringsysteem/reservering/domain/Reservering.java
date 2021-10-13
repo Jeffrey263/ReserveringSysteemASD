@@ -1,7 +1,7 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
-import domain.gebouw.FlexplexId;
-import domain.gebruiker.GebruikerId;
+import reserveringsysteem.gebouw.domain.FlexplexId;
+import reserveringsysteem.gebruiker.GebruikerId;
 
 public class Reservering {
     private ReserveringId id;

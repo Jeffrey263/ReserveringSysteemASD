@@ -1,6 +1,6 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
-import domain.Repository;
+import reserveringsysteem.Repository;
 
 import java.util.ArrayList;
 import java.util.List;

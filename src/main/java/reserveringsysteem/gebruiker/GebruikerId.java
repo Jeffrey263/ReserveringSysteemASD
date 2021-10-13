@@ -1,9 +1,9 @@
-package domain.gebouw;
+package reserveringsysteem.gebruiker;
 
-public class VestigingId {
+public class GebruikerId {
     private int id;
 
-    public VestigingId(int id) {
+    public GebruikerId(int id) {
         this.id = id;
     }
 

@@ -1,4 +1,4 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
 public class RapportageId {
     private int id;

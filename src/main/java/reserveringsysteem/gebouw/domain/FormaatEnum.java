@@ -1,4 +1,4 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
 public enum FormaatEnum {
     KLEIN,

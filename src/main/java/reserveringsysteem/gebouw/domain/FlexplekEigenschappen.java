@@ -1,4 +1,4 @@
-package domain.gebouw;
+package reserveringsysteem.gebouw.domain;
 
 public class FlexplekEigenschappen {
     private FormaatEnum formaat;

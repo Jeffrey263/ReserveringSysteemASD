@@ -1,4 +1,4 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
 public enum ReserveringStatusEnum {
     GELDIG,

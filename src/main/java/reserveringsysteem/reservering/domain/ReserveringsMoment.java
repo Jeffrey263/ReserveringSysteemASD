@@ -1,4 +1,4 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
 import java.util.Date;
 

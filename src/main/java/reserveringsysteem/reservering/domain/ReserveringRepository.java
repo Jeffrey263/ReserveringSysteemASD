@@ -1,7 +1,6 @@
-package domain.reservering;
+package reserveringsysteem.reservering.domain;
 
-import domain.Repository;
-import domain.gebouw.Flexplek;
+import reserveringsysteem.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
