@@ -29,6 +29,14 @@ public class Reservering {
         return false;
     }
 
+    public boolean valtTussen(RapportageTijdbestek tijd) {
+        if(moment.getDatum().after(tijd.getStart()) && moment.getDatum().before(tijd.getEind()) || moment.getDatum().equals(tijd.getStart()) || moment.getDatum().equals(tijd.getEind())){
+            return true;
+        }
+        else
+            return  false;
+    }
+
     public int getId() {
         return id.getId();
     }
@@ -67,5 +75,13 @@ public class Reservering {
 
     public void setMoment(ReserveringsMoment moment) {
         this.moment = moment;
+    }
+
+    @Override
+    public String toString() {
+        return "\nReservering{" +
+                "id=" + id +
+                ", moment=" + moment.getDatum() +
+                '}';
     }
 }

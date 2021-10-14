@@ -56,4 +56,16 @@ public class ReserveringRepository implements Repository {
 
         return true;
     }
+
+    public List<ReserveringId> getByTijdbestek(RapportageTijdbestek tijd){
+        List<ReserveringId> resList = new ArrayList<ReserveringId>();
+
+        for (Reservering r : reserveringen){
+            if(r.valtTussen(tijd)){
+                resList.add(new ReserveringId(r.getId()));
+            }
+        }
+
+        return resList;
+    }
 }

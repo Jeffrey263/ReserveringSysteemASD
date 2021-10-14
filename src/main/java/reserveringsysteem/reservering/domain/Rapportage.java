@@ -2,15 +2,19 @@ package reserveringsysteem.reservering.domain;
 
 import reserveringsysteem.gebruiker.GebruikerId;
 
+import java.util.List;
+
 public class Rapportage {
     private RapportageId id;
     private RapportageTijdbestek tijdbestek;
     private GebruikerId aanvrager;
+    private List<ReserveringId> reserveringen;
 
-    public Rapportage(RapportageId id, RapportageTijdbestek tijdbestek, GebruikerId aanvrager) {
+    public Rapportage(RapportageId id, RapportageTijdbestek tijdbestek, GebruikerId aanvrager, List<ReserveringId> reserveringen) {
         this.id = id;
         this.tijdbestek = tijdbestek;
         this.aanvrager = aanvrager;
+        this.reserveringen = reserveringen;
     }
 
     public RapportageId getId() {
@@ -35,5 +39,13 @@ public class Rapportage {
 
     public void setAanvrager(GebruikerId aanvrager) {
         this.aanvrager = aanvrager;
+    }
+
+    public List<ReserveringId> getReserveringen() {
+        return reserveringen;
+    }
+
+    public void setReserveringen(List<ReserveringId> reserveringen) {
+        this.reserveringen = reserveringen;
     }
 }
