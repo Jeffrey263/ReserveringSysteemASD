@@ -57,15 +57,18 @@ public class ReserveringRepository implements Repository {
         return true;
     }
 
-    public boolean annuleer(ReserveringId id){
-        for (Reservering r : reserveringen) {
-            if (r.getId() == id.getId()) {
-                if (r.isGeboekt(r.getStatus())) {
-                    r.setStatus(ReserveringStatusEnum.GEANNULEERD);
-                    return true;
-                }
+    //Codehulp van Jeffrey
+    public List<ReserveringId> getByTijdbestek(RapportageTijdbestek tijd)
+    {
+        List<ReserveringId> resList = new ArrayList<ReserveringId>();
+
+        for (Reservering r : reserveringen)
+        {
+            if(r.valtTussen(tijd))
+            {
+                resList.add(new ReserveringId(r.getId()));
             }
         }
-        return false;
+        return resList;
     }
 }

@@ -2,6 +2,7 @@ package reserveringsysteem.reservering.domain;
 
 import reserveringsysteem.gebouw.domain.FlexplexId;
 import reserveringsysteem.gebruiker.GebruikerId;
+import reserveringsysteem.reservering.domain.RapportageTijdbestek;
 
 public class Reservering {
     private ReserveringId id;
@@ -74,5 +75,17 @@ public class Reservering {
 
     public void setMoment(ReserveringsMoment moment) {
         this.moment = moment;
+    }
+
+    //Codehulp van Jeffrey
+    public boolean valtTussen (RapportageTijdbestek tijd)
+    {
+        if(moment.getDatum().after(tijd.getStart()) && moment.getDatum().before(tijd.getEind()) 
+            || moment.getDatum().equals(tijd.getStart()) || moment.getDatum().equals(tijd.getEind()))
+        {
+            return true;
+        }
+            else
+                return false;
     }
 }
