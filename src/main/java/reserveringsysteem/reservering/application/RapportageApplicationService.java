@@ -16,6 +16,6 @@ public class RapportageApplicationService
     public boolean createRapportage(RapportageTijdbestek tijdbestek, GebruikerId gebruiker)
     {
 
-        return repository.create(tijdbestek, gebruiker);
+        return repository.createRapportage(tijdbestek, gebruiker);
     }
 }

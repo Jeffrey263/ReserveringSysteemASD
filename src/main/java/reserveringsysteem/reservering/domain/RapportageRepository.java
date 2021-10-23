@@ -36,4 +36,10 @@ public class RapportageRepository implements Repository {
         }
         return null;
     }
+
+    public boolean createRapportage(RapportageTijdbestek tijdbestek, GebruikerId gebruiker)
+    {
+        return Rapportage(tijdbestek, gebruiker);   
+    }
 }
+
