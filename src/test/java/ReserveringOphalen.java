@@ -35,7 +35,7 @@ public class ReserveringOphalen {
     @Order(1)
     public void testOphalen1() throws ParseException {
         rest.createReservering(5, new SimpleDateFormat("dd/MM/yyyy").parse("01/12/2020"), DagdeelEnum.MIDDAG, 3);
-        Reservering r = (Reservering) rep.getById(3);
+        Reservering r = (Reservering) rep.getById(1);
         r.setStatus(ReserveringStatusEnum.VERLOPEN);
         Assertions.assertEquals(0, rest.getAllGeldigeReserveringen(new SimpleDateFormat("dd/MM/yyyy").parse("01/11/2021"), new SimpleDateFormat("dd/MM/yyyy").parse("01/12/2021")).size());
     }
@@ -47,6 +47,7 @@ public class ReserveringOphalen {
         rest.createReservering(5, new SimpleDateFormat("dd/MM/yyyy").parse("01/12/2021"), DagdeelEnum.MIDDAG, 1);
         Reservering r = (Reservering) rep.getById(1);
         r.setStatus(ReserveringStatusEnum.GEANNULEERD);
+        System.out.println(rest.getAllGeldigeReserveringen(new SimpleDateFormat("dd/MM/yyyy").parse("01/11/2021"), new SimpleDateFormat("dd/MM/yyyy").parse("02/12/2021")));
         Assertions.assertEquals(0, rest.getAllGeldigeReserveringen(new SimpleDateFormat("dd/MM/yyyy").parse("01/11/2021"), new SimpleDateFormat("dd/MM/yyyy").parse("02/12/2021")).size());
 
     }
