@@ -59,4 +59,5 @@ public class ReserveringAanmaken {
     public void testAanmakenOpBestaandeDatumEnTijdAnderePlek() throws ParseException {
         Assertions.assertEquals(true, rest.createReservering(3, new SimpleDateFormat("dd/MM/yyyy").parse("30/12/2021"), DagdeelEnum.OCHTEND,3));
     }
+
 }
