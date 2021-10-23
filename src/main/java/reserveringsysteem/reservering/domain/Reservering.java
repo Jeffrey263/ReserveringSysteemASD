@@ -68,4 +68,16 @@ public class Reservering {
     public void setMoment(ReserveringsMoment moment) {
         this.moment = moment;
     }
+
+    //Code van Jeffrey (Max zijn service?)
+    public boolean valtTussen (RapportageTijdsbestek tijd) 
+    {
+        if(moment.getDatum().after(tijd.getStart()) && moment.getDatum().before(tijd.getEind()) 
+            || moment.getDatum().equals(tijd.getStart()) || moment.getDatum().equals(tijd.getEind()))
+        {
+            return true;
+        }
+            else
+                return false;
+    }
 }
