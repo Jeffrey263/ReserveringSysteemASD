@@ -5,6 +5,7 @@ import reserveringsysteem.gebruiker.GebruikerId;
 import reserveringsysteem.reservering.application.ReserveringApplicationService;
 import reserveringsysteem.reservering.domain.DagdeelEnum;
 import reserveringsysteem.reservering.domain.ReserveringsMoment;
+import reserveringsysteem.reservering.domain.ReserveringId;
 
 import java.util.Date;
 
@@ -23,6 +24,13 @@ public class ReserveringRESTService {
         GebruikerId gebruikerId = new GebruikerId(gebruiker);
 
         return reserveringApplication.createReservering(flexplekId, moment, gebruikerId);
+    }
+
+    public  boolean annuleerReservering(int reservering){
+
+        ReserveringId reserveringId = new ReserveringId(reservering);
+
+        return reserveringApplication.annuleerReservering(reserveringId);
     }
 
 }

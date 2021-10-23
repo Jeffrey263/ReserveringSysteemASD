@@ -2,6 +2,7 @@ package reserveringsysteem.reservering.application;
 
 import reserveringsysteem.gebouw.domain.FlexplexId;
 import reserveringsysteem.gebruiker.GebruikerId;
+import reserveringsysteem.reservering.domain.ReserveringId;
 import reserveringsysteem.reservering.domain.ReserveringRepository;
 import reserveringsysteem.reservering.domain.ReserveringsMoment;
 
@@ -15,5 +16,10 @@ public class ReserveringApplicationService {
     public boolean createReservering(FlexplexId flexplek, ReserveringsMoment moment, GebruikerId gebruiker){
 
         return repository.create(flexplek, moment, gebruiker);
+    }
+
+    public boolean annuleerReservering(ReserveringId reservering) {
+
+        return repository.annuleer(reservering);
     }
 }
