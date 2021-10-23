@@ -71,4 +71,16 @@ public class ReserveringRepository implements Repository {
         }
         return resList;
     }
+
+    public boolean annuleer(ReserveringId id){
+        for (Reservering r : reserveringen) {
+            if (r.getId() == id.getId()) {
+                if (r.isGeboekt(r.getStatus())) {
+                    r.setStatus(ReserveringStatusEnum.GEANNULEERD);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
