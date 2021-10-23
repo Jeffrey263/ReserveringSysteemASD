@@ -29,6 +29,13 @@ public class Reservering {
         return false;
     }
 
+    public boolean isGeboekt(ReserveringStatusEnum s){
+        if(s == ReserveringStatusEnum.GELDIG){
+            return true;
+        }
+        return false;
+    }
+
     public int getId() {
         return id.getId();
     }
