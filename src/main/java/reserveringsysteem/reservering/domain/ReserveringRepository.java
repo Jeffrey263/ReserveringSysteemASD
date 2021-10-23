@@ -57,7 +57,7 @@ public class ReserveringRepository implements Repository {
         return true;
     }
 
-    //Code van Jeffrey (Max zijn service?)
+    //Codehulp van Jeffrey
     public List<ReserveringId> getByTijdbestek(RapportageTijdbestek tijd)
     {
         List<ReserveringId> resList = new ArrayList<ReserveringId>();

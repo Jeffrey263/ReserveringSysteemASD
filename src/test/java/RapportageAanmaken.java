@@ -2,9 +2,11 @@ import org.junit.jupiter.api.*;
 import reserveringsysteem.reservering.adapters.ReserveringRESTService;
 import reserveringsysteem.reservering.adapters.RapportageRESTService;
 import reserveringsysteem.reservering.application.RapportageApplicationService;
+import reserveringsysteem.reservering.application.ReserveringApplicationService;
 import reserveringsysteem.reservering.domain.RapportageRepository;
 import reserveringsysteem.reservering.domain.RapportageTijdbestek;
 import reserveringsysteem.reservering.domain.Rapportage;
+import reserveringsysteem.reservering.domain.ReserveringRepository;
 
 
 import java.text.ParseException;
@@ -15,6 +17,14 @@ import java.util.Date;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RapportageAanmaken 
 {
+	static ReserveringRepository resRep;
+	static ReserveringApplicationService resApp;
+	static ReserveringRESTService resRest;
+
+	static RapportageRepository rapRep;
+	static RapportageApplicationService rapApp;
+	static RapportageRESTService rapRest;
+
 	@BeforeAll
 	public static void setUp()
 	{
@@ -32,7 +42,7 @@ public class RapportageAanmaken
 	@Order(1)
 	public void rapportageAanmaken() throws ParseException
 	{
-        Assertions.assertEquals(true, rest.createRapportage(new SimpleDateFormat("dd/MM/yyyy").parse("24/11/2021"), 
+        Assertions.assertEquals(true, rapRest.createRapportage(new SimpleDateFormat("dd/MM/yyyy").parse("24/11/2021"),
         	new SimpleDateFormat("dd/MM/yyyy").parse("26/11/2021"),7));
     }
 }

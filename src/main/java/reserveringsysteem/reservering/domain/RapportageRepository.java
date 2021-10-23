@@ -1,6 +1,7 @@
 package reserveringsysteem.reservering.domain;
 
 import reserveringsysteem.Repository;
+import reserveringsysteem.gebruiker.GebruikerId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,6 @@ public class RapportageRepository implements Repository {
 
     public boolean createRapportage(RapportageTijdbestek tijdbestek, GebruikerId gebruiker)
     {
-        return Rapportage(tijdbestek, gebruiker);   
+        return true;
     }
 }
-

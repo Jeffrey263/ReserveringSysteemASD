@@ -8,10 +8,10 @@ import java.util.Date;
 
 public class RapportageRESTService 
 {
-	private RapportageApplicationService rapportageApplication;
+    private RapportageApplicationService rapportageApplication;
 
-	public RapportageRESTService(RapportageApplicationService rapportageApplication) 
-	{
+    public RapportageRESTService(RapportageApplicationService rapportageApplication) 
+    {
         this.rapportageApplication = rapportageApplication;
     }
 
