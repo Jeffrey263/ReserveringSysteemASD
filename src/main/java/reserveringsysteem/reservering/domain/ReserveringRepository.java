@@ -5,6 +5,7 @@ import reserveringsysteem.gebouw.domain.FlexplexId;
 import reserveringsysteem.gebruiker.GebruikerId;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ReserveringRepository implements Repository {
@@ -82,5 +83,15 @@ public class ReserveringRepository implements Repository {
             }
         }
         return false;
+    }
+
+    public List<ReserveringId> getAllGeldigeReserveringen(Date start, Date eind) {
+        List<ReserveringId> resList = new ArrayList<ReserveringId>();
+            for (Reservering r : reserveringen) {
+                if (r.getStatus() == ReserveringStatusEnum.GELDIG && ((r.getMoment().getDatum().after(start) && r.getMoment().getDatum().before(eind)) || r.getMoment().getDatum().equals(start) || r.getMoment().getDatum().equals(eind))){
+                    resList.add( new ReserveringId(r.getId()));
+                }
+            }
+        return resList;
     }
 }

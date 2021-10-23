@@ -2,9 +2,10 @@ package reserveringsysteem.reservering.application;
 
 import reserveringsysteem.gebouw.domain.FlexplexId;
 import reserveringsysteem.gebruiker.GebruikerId;
-import reserveringsysteem.reservering.domain.ReserveringId;
-import reserveringsysteem.reservering.domain.ReserveringRepository;
-import reserveringsysteem.reservering.domain.ReserveringsMoment;
+import reserveringsysteem.reservering.domain.*;
+
+import java.util.Date;
+import java.util.List;
 
 public class ReserveringApplicationService 
 {
@@ -25,4 +26,10 @@ public class ReserveringApplicationService
 
         return repository.annuleer(reservering);
     }
+    
+    public List<ReserveringId> getAllGeldigeReserveringen(Date start, Date eind){
+        return repository.getAllGeldigeReserveringen(start, eind);
+
+    }
+
 }

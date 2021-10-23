@@ -4,10 +4,13 @@ import reserveringsysteem.gebouw.domain.FlexplexId;
 import reserveringsysteem.gebruiker.GebruikerId;
 import reserveringsysteem.reservering.application.ReserveringApplicationService;
 import reserveringsysteem.reservering.domain.DagdeelEnum;
+import reserveringsysteem.reservering.domain.Reservering;
+import reserveringsysteem.reservering.domain.ReserveringId;
 import reserveringsysteem.reservering.domain.ReserveringsMoment;
 import reserveringsysteem.reservering.domain.ReserveringId;
 
 import java.util.Date;
+import java.util.List;
 
 public class ReserveringRESTService {
     private ReserveringApplicationService reserveringApplication;
@@ -31,6 +34,11 @@ public class ReserveringRESTService {
         ReserveringId reserveringId = new ReserveringId(reservering);
 
         return reserveringApplication.annuleerReservering(reserveringId);
+    }
+
+    public List<ReserveringId> getAllGeldigeReserveringen(Date start, Date eind) {
+        List<ReserveringId> reserveringen = reserveringApplication.getAllGeldigeReserveringen(start, eind);
+        return reserveringen;
     }
 
 }
