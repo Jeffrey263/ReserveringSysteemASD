@@ -1,6 +1,11 @@
 import org.junit.jupiter.api.*;
 import reserveringsysteem.reservering.adapters.ReserveringRESTService;
 import reserveringsysteem.reservering.adapters.RapportageRESTService;
+import reserveringsysteem.reservering.application.RapportageApplicationService;
+import reserveringsysteem.reservering.domain.RapportageRepository;
+import reserveringsysteem.reservering.domain.RapportageTijdbestek;
+import reserveringsysteem.reservering.domain.Rapportage;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
